@@ -1,0 +1,786 @@
+@charset "utf-8";
+
+/*公共类*/
+
+.container {
+	width: 1236px;
+	margin: 0 auto;
+}
+
+.clear {
+	clear: both;
+}
+
+.center {
+	text-align: center;
+}
+
+.left {
+	width: 782px;
+}
+
+.right {
+	width: 408px;
+}
+
+.relative {
+	position: relative;
+}
+
+.icon {
+	display: inline-block;
+	background: url(../img/images/spr-v2.png) no-repeat;
+}
+
+.icons {
+	display: inline-block;
+	background: url(../img/images/spr_hero.png) no-repeat;
+}
+
+.bg {
+	background-color: #f7f8f8;
+}
+
+
+/*顶部菜单栏*/
+
+.icon_logo {
+	width: 184px;
+	height: 99px;
+	background-position: 0px -30px;
+}
+
+.logo {
+	position: absolute;
+	top: 0px;
+	left: 25px;
+}
+
+.top {
+	background-color: #000000;
+}
+
+.menu {
+	padding: 10px 50px;
+	font-size: 14px;
+	color: white;
+}
+
+.first {
+	padding: 5px 30px;
+}
+
+.first a {
+	color: white;
+}
+
+.first_1 {
+	font-size: 10px;
+	color: #343320;
+}
+
+
+/*banner块*/
+
+.banner {
+	height: 610px;
+	background: url(../img/images/banner_02.png);
+	background-position: center bottom;
+}
+
+.wajie {
+	font-size: 36px;
+	color: #07bf9e;
+	font-weight: bold;
+	position: absolute;
+	top: 120px;
+	left: 5px;
+}
+
+.txt_aixi {
+	position: absolute;
+	top: 185px;
+	left: 5px;
+	color: white;
+	width: 420px;
+}
+
+.video {
+	position: absolute;
+	top: 250px;
+	left: 5px;
+}
+
+.start {
+	position: absolute;
+	top: 35px;
+	left: 90px;
+}
+
+.look_info {
+	position: absolute;
+	top: 395px;
+	left: 5px;
+	border: 1px solid #00ffce;
+	background: url(../img/images/bg_look.png) repeat;
+	padding: 10px 50px;
+}
+
+.look_info a {
+	color: #00ffa6;
+}
+
+.version {
+	position: absolute;
+	top: 445px;
+	right: 0px;
+	color: #888787;
+}
+
+.version_info {
+	border: 1px solid #00FFCE;
+	background: url(../img/images/bg_look.png) repeat;
+	padding: 5px 10px;
+}
+
+.version_info a {
+	color: #00FFA6;
+}
+
+.version span {
+	color: #00ffcf;
+}
+
+.txt_banben {
+	padding: 6px 10px;
+}
+
+.bg_download {
+	position: absolute;
+	top: 494px;
+	left: 5px;
+}
+
+.icons_new {
+	width: 36px;
+	height: 34px;
+	background-position: -3px 0;
+}
+
+.icons_video {
+	width: 36px;
+	height: 36px;
+	background-position: -47px 0;
+}
+
+.icons_comp {
+	width: 38px;
+	height: 36px;
+	background-position: -86px -1px;
+}
+
+.icons_data {
+	width: 35px;
+	height: 35px;
+	background-position: -130px 0;
+}
+
+.icons_own {
+	width: 40px;
+	height: 40px;
+	background-position: -165px 0;
+}
+
+.icons_user {
+	width: 94px;
+	height: 94px;
+	background-position: 0 -41px;
+}
+
+.login {
+	background: url(../img/images/users_bg.png) repeat;
+}
+
+.users {
+	padding: 9px;
+}
+
+.new_user {
+	position: absolute;
+	top: 15px;
+	left: 35px;
+}
+
+.user_bao {
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	padding: 5px 20px;
+	font-size: 16px;
+	color: #e9eaef;
+}
+
+.task_bao {
+	position: absolute;
+	top: 70px;
+	left: 0px;
+	padding: 5px 16px;
+	color: #5e677f;
+}
+
+.txt_usename {
+	padding: 15px 5px 10px;
+	font-size: 16px;
+	color: #fafafa;
+}
+
+.txt_usename a {
+	color: #00ffad;
+}
+
+.txt_loginon {
+	padding: 5px;
+	color: #c1cfe8;
+}
+
+.txt_loginon span {
+	color: #FFFFFF;
+}
+
+
+/*小的banner图*/
+
+.little_ban {
+	padding: 30px 0px;
+}
+
+.fiveyear {
+	padding: 10px 33px;
+}
+
+.brief {
+	margin-top: -4px;
+	background-color: #e6e6e6;
+	padding: 10px 0px;
+}
+
+.brief a {
+	color: #000000;
+}
+
+.brief a:hover {
+	background-color: #36ab87;
+	color: white;
+}
+
+
+/*视频中心*/
+
+.rect_left {
+	width: 10px;
+	height: 25px;
+	background: url(../img/images/rect2_36.png) no-repeat;
+}
+
+.rect_right {
+	width: 10px;
+	height: 25px;
+	background: url(../img/images/rect2_40.png) no-repeat;
+}
+
+.rect_conten {
+	padding: 3px 0px;
+	height: 25px;
+	background: url(../img/images/rect2_38.png) repeat-x;
+}
+
+.video_cen,
+.skin,
+.competition,
+.action {
+	padding: 10px 15px;
+	font-size: 18px;
+	color: #000000;
+	font-weight: bold;
+}
+
+.duiqi {
+	vertical-align: top;
+}
+
+.enter,
+.submit,
+.com_enter,
+.active_enter {
+	padding: 15px 5px;
+}
+
+.many_video {
+	font-size: 16px;
+	font-weight: bold;
+	padding: 30px 0px 10px;
+	border-bottom: 4px solid #EAEAEA;
+}
+
+.new_video {
+	padding: 10px 31px;
+}
+
+.more_video {
+	background-color: #e6e6e6;
+	padding: 5px;
+}
+
+.more_video a {
+	color: #000000;
+}
+
+.more_video span {
+	color: #02bb95;
+}
+
+.tu_txt {
+	padding: 25px 0px;
+	margin-left: -19px;
+}
+
+.txt_info {
+	margin: 10px 0px 10px 19px;
+}
+
+.bg_time {}
+
+.bg_time span {
+	color: white;
+	position: absolute;
+	top: 85px;
+	left: 0px;
+	background: url(../img/images/bg_look.png) repeat;
+	padding: 0px 5px 0px 145px;
+}
+
+.txt_con {
+	width: 180px;
+	padding: 10px 0px;
+	font-size: 14px;
+}
+
+
+/*客服专区*/
+
+.shenglue {
+	padding: 18px 5px;
+}
+
+.service {
+	padding: 50px 0px 10px;
+}
+
+.serv {
+	border-bottom: 4px solid #EAEAEA;
+	padding: 51px 0px 10px;
+}
+
+.service_self {
+	font-size: 16px;
+	padding: 10px 20px;
+}
+
+.relate {
+	font-size: 14px;
+	padding: 11px 15px;
+}
+
+.serv a {
+	color: #424141;
+	border-bottom: 4px solid #EAEAEA;
+}
+
+.serv a:hover {
+	color: #00AB88;
+	border-bottom: 4px solid #00ab88;
+}
+
+.title_list {
+	padding: 10px 0px 50px;
+}
+
+.own ul,
+.others ul {
+	padding: 5px 120px 5px 0px;
+}
+
+.own li,
+.others li {
+	width: 270px;
+	padding: 4px 0px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+
+/*赛事中心*/
+
+.comp {
+	padding: 35px 0px;
+}
+
+.lea_mat {
+	font-size: 16px;
+	font-weight: bold;
+	padding: 30px 0px 10px;
+	border-bottom: 4px solid #EAEAEA;
+}
+
+.league_mat {
+	padding: 10px 23px;
+}
+
+.tu_com {
+	padding: 20px 20px 0px 0px;
+}
+
+.button_style {
+	width: 180px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #09473b;
+	padding: 9px 0px;
+	margin-top: 10px;
+	background: url(../img/images/button_style_07.png) no-repeat;
+}
+
+.wang_gu {
+	width: 575px;
+	padding: 10px 5px 10px 0px;
+	border-bottom: 1px solid #d5d4d4;
+}
+
+.title_wang {
+	font-size: 22px;
+	color: #029175;
+	font-weight: bold;
+	padding: 10px 25px 10px 0px;
+}
+
+.time {
+	color: #000000;
+	padding: 10px 25px 10px 0px;
+}
+
+
+/*新闻*/
+
+.titles {
+	width: 400px;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 30px 0px 10px;
+	border-bottom: 4px solid #eaeaea;
+}
+
+.synth {
+	padding: 10px 23px;
+}
+
+
+/*一些css样式成组*/
+
+.titles a,
+.many_video a,
+.hero_skin a,
+.lea_mat a {
+	border-bottom: 4px solid #eaeaea;
+	color: #000;
+}
+
+.titles a:hover,
+.many_video a:hover,
+.hero_skin a:hover,
+.lea_mat a:hover {
+	border-bottom: 4px solid #00ab88;
+	color: #00ab88;
+}
+
+.update {
+	padding: 12px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.update a {
+	color: #00a684;
+}
+
+.survey {
+	background-color: #efeded;
+	font-size: 14px;
+	color: #4b4949;
+	padding: 7px;
+}
+
+.onenew {
+	font-size: 14px;
+	color: #000000;
+	padding: 5px 0px;
+}
+
+
+/*皮肤*/
+
+.skin_title {
+	padding: 30px 10px 10px;
+}
+
+.my_hero,
+.all_hero {
+	padding: 10px 5px;
+}
+
+.hero_skin {
+	font-weight: bold;
+	padding: 30px 0px 10px;
+	font-size: 16px;
+	border-bottom: 4px solid #eaeaea;
+}
+
+.week_hero {
+	padding: 10px 34px;
+}
+
+.skin_picture {
+	margin: 10px 0px 10px -3px;
+}
+
+.skin_tu {
+	margin: 10px 0px 0px 4px;
+}
+
+.quick_enter {
+	padding: 33px 15px 18px;
+	font-size: 18px;
+	color: #000000;
+	font-weight: bold;
+}
+
+.quick_picture {
+	margin-left: -5px;
+}
+
+.quick_tu {
+	background-color: white;
+	border: 1px solid #e9e9e9;
+	padding: 45px 20px 10px;
+	margin: 8px 0px 0px 5px;
+}
+
+.icon_enter {
+	width: 26px;
+	height: 27px;
+	background-position: -381px 0px;
+}
+
+.icon_repu {
+	width: 29px;
+	height: 29px;
+	background-position: -531px 0px;
+}
+
+.icon_cdk {
+	width: 28px;
+	height: 28px;
+	background-position: -291px 0px;
+}
+
+.icon_game {
+	width: 30px;
+	height: 30px;
+	background-position: -259px 0px;
+}
+
+.icon_weibo {
+	width: 32px;
+	height: 28px;
+	background-position: -499px 0px;
+}
+
+.icon_prize {
+	width: 28px;
+	height: 28px;
+	background-position: -470px 0px;
+}
+
+.icon_gamer {
+	width: 28px;
+	height: 28px;
+	background-position: -412px 0px;
+}
+
+.icon_online {
+	width: 27px;
+	height: 29px;
+	background-position: -442px 0px;
+}
+
+.icon_quick {
+	position: absolute;
+	top: 5px;
+	left: 35px;
+}
+
+.txt_quick {
+	font-size: 14px;
+	color: #000000;
+}
+
+
+/*活动中心*/
+
+.active {
+	padding: 35px 0px 10px;
+}
+
+.rect_1_left {
+	width: 10px;
+	height: 22px;
+	background: url(../img/images/rect_1_06.png) no-repeat;
+}
+
+.rect_1_right {
+	width: 10px;
+	height: 22px;
+	background: url(../img/images/rect_1_10.png) no-repeat;
+}
+
+.rect_1_conten {
+	height: 22px;
+	background: url(../img/images/rect_1_08.png) repeat-x;
+}
+
+.act {}
+
+.act_new {
+	width: 150px;
+	font-size: 14px;
+	color: #000000;
+	overflow: hidden;
+	padding: 2px 15px;
+	white-space: nowrap;
+}
+
+.process {
+	padding: 2px 10px;
+}
+
+.process a {
+	color: white;
+}
+
+.rect2_left {
+	width: 10px;
+	height: 22px;
+	background: url(../img/images/rect3_19.png) no-repeat;
+}
+
+.rect2_right {
+	width: 10px;
+	height: 22px;
+	background: url(../img/images/rect3_24.png) no-repeat;
+}
+
+.rect2_conten {
+	height: 22px;
+	background: url(../img/images/rect3_21.png) repeat-x;
+}
+
+.qt {
+	padding: 60px 0px;
+}
+
+.bg_renwu {
+	color: white;
+	position: absolute;
+	top: 130px;
+	left: 0px;
+	width: 145px;
+	height: 40px;
+	background: url(../img/images/bg_look.png) repeat;
+}
+
+.bg_renwu span {
+	padding: 0px 20px;
+}
+
+
+/*最底部*/
+
+.bg_bottom {
+	background-color: #e4e3e3;
+}
+
+.erweima {
+	padding: 30px 10px 10px 0px;
+}
+
+.we_wait,
+.sweet {
+	font-size: 16px;
+	color: #000000;
+	padding: 30px 10px 7px;
+	font-weight: bold;
+}
+
+.scan {
+	color: #818181;
+	width: 189px;
+	padding: 0px 10px 10px;
+}
+
+.wait {
+	padding-right: 130px;
+}
+
+.eighteen {
+	color: #818181;
+	width: 400px;
+	padding: 0px 10px 10px;
+}
+
+.media {
+	width: 260px;
+	padding: 5px 20px;
+	background-color: #f1efef;
+}
+
+.com_media {
+	margin: 35px 10px;
+	border: 4px solid #d4d4d4;
+}
+
+.line {
+	border-bottom: 3px solid #c6c6c6;
+}
+
+.logo_1 {
+	padding: 30px 10px;
+}
+.prove{
+	width: 650px;
+}
+.line_short{
+	border-left: 1px solid #b9b9b9;
+	height: 10px;
+	margin: 5px;
+}
+
+.blank{
+	color: #000000;
+	padding: 20px 5px;
+}
+.wen{
+	color: #000000;
+}
+.wen img{
+	padding: 3px 0px;
+}
