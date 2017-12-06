@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>小米天气-晴天</title>
+	</head>
+
+	<body>
+		<canvas id="canvas" width="540" height="540"></canvas>
+		<script type="text/javascript">
+			window.onload = function() {
+				var oCanvas = document.getElementById("canvas");
+				var context = oCanvas.getContext("2d");
+				//大背景
+				context.beginPath();
+				context.fillStyle = "#56c992";
+				context.fillRect(0, 0, 540, 540);
+				context.closePath();
+				//左边小块
+				context.beginPath();
+				context.moveTo(0, 442);
+				context.lineTo(0, 356);
+				context.quadraticCurveTo(110, 340, 330, 420);
+				context.fillStyle = "#48c18c"
+				context.fill();
+				context.closePath();
+
+				function triangle() {
+					context.beginPath();
+					context.fillStyle = "#30b282";
+					context.moveTo(270, 395);
+					context.lineTo(277, 375);
+					context.lineTo(284, 395);
+					context.fill();
+					context.closePath();
+				}
+				triangle();
+
+				context.translate(180, -30)
+				triangle();
+				context.translate(10, 4);
+				triangle();
+
+				context.translate(-10, -4);
+				context.translate(-180, 30);
+				//底边
+				context.beginPath();
+				context.moveTo(0, 540);
+				context.lineTo(0, 442);
+				context.bezierCurveTo(200, 442, 400, 320, 540, 375)
+				context.lineTo(540, 540);
+				context.lineTo(0, 540)
+				context.fillStyle = "#2cb081";
+				context.fill();
+				context.closePath();
+				//树1
+				context.translate(80, 365);
+				context.scale(1.5, 1.5);
+				trees();
+
+				//树2
+				context.restore();
+				context.translate(70, 10);
+				context.scale(0.8, 0.8);
+				trees();
+				//大树
+				context.translate(150, -20);
+				context.scale(1.5, 1.5);
+				context.rotate(-Math.PI / 3);
+				trees();
+				
+				context.translate(-13, 6);
+				context.scale(2, 2);
+				context.rotate(Math.PI / 3);
+				trees();
+				
+				context.translate(0, -7);
+				context.scale(0.5, 0.5);
+				context.rotate(Math.PI / 3);
+				trees();
+				function trees() {
+					context.save();
+					context.beginPath();
+					context.lineWidth = 1;
+					context.moveTo(0, -10);
+					context.lineTo(0, 0);
+					context.strokeStyle = "#2ea472";
+					context.stroke();
+					context.closePath();
+					context.beginPath();
+					context.moveTo(0, 0);
+					context.lineTo(10, 5);
+					context.strokeStyle = "rgba(0,0,0,0.07)";
+					context.shadowOffsetX = 1;
+					context.shadowOffsetY = 1;
+					context.shadowColor = "rgba(0,0,0,0.07)";
+					context.shadowBlur = 20;
+					context.stroke();
+					context.closePath();
+					context.beginPath();
+					context.arc(0, -20, 10, 0, 2 * Math.PI, true);
+					var grd = context.createLinearGradient(-5, -18, 5, -15)
+					grd.addColorStop(0, "#38c08e");
+					grd.addColorStop(1, "#27b07c")
+					context.fillStyle = grd;
+					context.fill();
+					context.closePath();
+				}
+
+			}
+		</script>
+	</body>
+
+</html>

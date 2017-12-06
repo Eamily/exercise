@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>小米天气--晴天</title>
+	</head>
+
+	<body>
+		<canvas id="canvas" width="540" height="540"></canvas>
+		<script type="text/javascript">
+			window.onload = function() {
+				var oCanvas = document.getElementById("canvas");
+				var context = oCanvas.getContext("2d");
+				var x = 500;
+				var y = 50;
+
+				(function move() {
+					context.clearRect(0, 0, oCanvas.width, oCanvas.height);
+					//大背景
+					context.beginPath();
+					context.fillStyle = "#56c992";
+					context.fillRect(0, 0, oCanvas.width, oCanvas.height);
+					context.closePath();
+					//左边小块
+					context.beginPath();
+					context.moveTo(0, 442);
+					context.lineTo(0, 356);
+					context.quadraticCurveTo(110, 340, 330, 420);
+					context.fillStyle = "#48c18c"
+					context.fill();
+					context.closePath();
+
+					function triangle() {
+						context.beginPath();
+						context.fillStyle = "#30b282";
+						context.moveTo(270, 395);
+						context.lineTo(277, 375);
+						context.lineTo(284, 395);
+						context.fill();
+						context.closePath();
+					}
+					triangle();
+
+					context.translate(180, -30)
+					triangle();
+					context.translate(10, 4);
+					triangle();
+
+					context.translate(-10, -4);
+					context.translate(-180, 30);
+					//底边
+					context.beginPath();
+					context.moveTo(0, 540);
+					context.lineTo(0, 442);
+					context.bezierCurveTo(200, 442, 400, 320, 540, 375)
+					context.lineTo(540, 540);
+					context.lineTo(0, 540)
+					context.fillStyle = "#2cb081";
+					context.fill();
+					context.closePath();
+					//树
+					//树干
+					context.beginPath();
+					context.lineWidth = 1;
+					context.moveTo(100, 345);
+					context.lineTo(100, 370);
+					context.strokeStyle = "#2ea472";
+					context.stroke();
+					context.closePath();
+					//树干阴影
+					context.beginPath();
+					context.moveTo(100, 370);
+					context.lineTo(110, 375);
+					context.strokeStyle = "rgba(0,0,0,0.07)";
+					context.shadowOffsetX = 1;
+					context.shadowOffsetY = 1;
+					context.stroke();
+					context.closePath();
+					//树冠阴影
+					context.beginPath();
+					context.arc(120, 385, 15, 0, 2 * Math.PI, true);
+					var gra = context.createLinearGradient(120, 342, 140, 353)
+					gra.addColorStop(0, "#43bc87");
+					gra.addColorStop(1, "#48c18c")
+					context.fillStyle = gra;
+					context.fill();
+					context.closePath();
+					//树冠
+					context.beginPath();
+					context.arc(100, 340, 15, 0, 2 * Math.PI, true);
+					var grd = context.createLinearGradient(95, 342, 108, 353)
+					grd.addColorStop(0, "#38c08e");
+					grd.addColorStop(1, "#27b07c")
+					context.fillStyle = grd;
+					context.fill();
+					context.closePath();
+
+					context.beginPath();
+					context.lineWidth = 1;
+					context.moveTo(170, 355);
+					context.lineTo(170, 375);
+					context.strokeStyle = "#2ea472";
+					context.stroke();
+					context.closePath();
+					context.beginPath();
+					context.moveTo(173, 375);
+					context.lineTo(183, 380);
+					context.strokeStyle = "rgba(0,0,0,0.07)";
+					context.shadowOffsetX = 1;
+					context.shadowOffsetY = 1;
+					context.stroke();
+					context.closePath();
+					context.beginPath();
+					context.arc(190, 395, 10, 0, 2 * Math.PI, true);
+					var gra = context.createLinearGradient(190, 352, 210, 363)
+					gra.addColorStop(0, "#43bc87");
+					gra.addColorStop(1, "#48c18c")
+					context.fillStyle = gra;
+					context.fill();
+					context.closePath();
+					context.beginPath();
+					context.arc(170, 350, 10, 0, 2 * Math.PI, true);
+					var grd = context.createLinearGradient(165, 352, 178, 363)
+					grd.addColorStop(0, "#38c08e");
+					grd.addColorStop(1, "#27b07c")
+					context.fillStyle = grd;
+					context.fill();
+					context.closePath();
+					//大树
+					context.beginPath();
+					context.lineWidth = 3;
+					context.moveTo(370, 345);
+					context.lineTo(370, 390);
+					context.strokeStyle = "#2ea472";
+					context.stroke();
+					context.closePath();
+					context.beginPath();
+					context.moveTo(370, 390);
+					context.lineTo(400, 415);
+					context.strokeStyle = "rgba(0,0,0,0.07)";
+					context.shadowOffsetX = 1;
+					context.shadowOffsetY = 1;
+					context.stroke();
+					context.closePath();
+					context.beginPath();
+					context.arc(420, 425, 30, 0, 2 * Math.PI, true);
+					var gra = context.createLinearGradient(420, 352, 440, 363)
+					gra.addColorStop(0, "#2bab7b");
+					gra.addColorStop(1, "#2baf80");
+					context.fillStyle = gra;
+					context.fill();
+					context.closePath();
+					context.beginPath();
+					context.arc(370, 320, 30, 0, 2 * Math.PI, true);
+					var grd = context.createLinearGradient(365, 322, 378, 333)
+					grd.addColorStop(0, "#38c08e");
+					grd.addColorStop(1, "#27b07c");
+					context.fillStyle = grd;
+					context.fill();
+					context.closePath();
+
+					x -= 3;
+					y += 1;
+					context.beginPath();
+					context.moveTo( x, y);
+					context.lineTo(30 + x,  y);
+					context.lineTo(20 + x,  y-10);
+					context.lineTo(20 + x,  y-20);
+					context.fillStyle = "#3cb683";
+					context.fill();
+					context.closePath();
+
+					window.requestAnimationFrame(move);
+
+				})();
+				//
+				//				(function move() {
+				//					x -= 2;
+				//					y -= 1;
+				//					context.clearRect(0,0,oCanvas.width,oCanvas.height);
+				//					
+				//					window.requestAnimationFrame(move);
+				//				})()
+			}
+		</script>
+	</body>
+
+</html>
