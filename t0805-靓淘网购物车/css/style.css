@@ -1,0 +1,366 @@
+@charset "utf-8";
+
+/*公共类*/
+
+.container {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.clear {
+	clear: both;
+}
+
+.center {
+	text-align: center;
+}
+
+
+/*最顶部和菜单*/
+
+.top_box {
+	border-bottom: 1px solid #cdcdd0;
+}
+
+.menu li {
+	float: left;
+	padding: 10px 25px 5px;
+}
+
+.welcome {
+	padding: 10px 0px 5px;
+}
+
+
+/*logo*/
+
+.logo {
+	padding: 15px 0px;
+}
+
+.logo img {
+	float: left;
+}
+
+
+/*购物车*/
+
+.cart {
+	font-size: 24px;
+	color: #333333;
+	padding: 5px 15px;
+}
+
+
+/*搜索框*/
+
+.seek {
+	border: 2px solid #f41443;
+}
+
+.txt_seek {
+	width: 275px;
+	padding: 5px 10px;
+	border: none;
+	outline: none;
+	overflow: hidden;
+}
+
+.search {
+	font-size: 16px;
+	background-color: #f41443;
+	padding: 5px 10px;
+	color: #ffffff;
+	border: none;
+	outline: none;
+}
+
+
+/*全部商品、降价商品、库存紧张*/
+
+.underline {
+	font-size: 16px;
+	padding: 10px;
+}
+
+.goods_class a:hover .underline {
+	border-bottom: 1px solid #e42643;
+	color: #e42643;
+}
+
+.goods_class a:after {
+	clear: both;
+}
+
+.deliver {
+	padding: 10px 0px 10px 10px;
+	color: #666666;
+}
+
+
+/*购物车列表*/
+
+.table_title {
+	background-color: #f3f3f3;
+	padding: 5px;
+	border: 1px solid #e0e0e0;
+}
+
+.check {
+	padding: 8px 0px 5px 5px;
+}
+
+.selecte_all {
+	width: 55px;
+	padding: 5px 10px;
+}
+
+.goods_selected {
+	width: 330PX;
+	padding: 5px 10px;
+}
+
+.price,
+.num,
+.subtotal {
+	width: 135px;
+	padding: 5px 10px;
+}
+
+.action {
+	width: 50px;
+	padding: 5px 10px;
+}
+
+.shop {
+	padding: 10px 5px 5px;
+	border-bottom: 2px solid #aaaaaa;
+}
+
+.self_support {
+	margin: 5px 10px;
+}
+
+.on_sale {
+	/*text-align: center;*/
+	padding-left: 420px;
+	margin: 5px;
+}
+
+
+/*商品详情*/
+
+.bar {
+	border: 1px solid #cccccc;
+}
+
+.huangou {
+	padding: 10px 20px 0px;
+}
+
+.manhuan {
+	color: #999999;
+	padding: 10px 0px;
+}
+
+.look {
+	background-color: #f41443;
+	padding: 5px;
+	margin: 5px;
+}
+
+.look a {
+	color: white;
+}
+
+.add_on {
+	padding: 10px;
+}
+
+.goods_info {
+	border: 1px solid #cccccc;
+	border-top: none;
+}
+
+.check_gd {
+	margin: 20px 15px;
+}
+
+.shoping {
+	width: 360px;
+	padding: 10px 0px;
+}
+
+.square_box {
+	width: 80px;
+	height: 80px;
+	border: 1px solid #eeeeee;
+	margin: 10px 0px;
+}
+
+.txt_details {
+	width: 258px;
+	padding: 10px;
+}
+
+.txt_huawei {
+	width: 200px;
+	height: 40px;
+}
+
+.seven_re {}
+
+.seven_re span {
+	color: #6679b3;
+	padding: 0px 0px 5px 5px;
+	vertical-align: top;
+}
+.page span{
+	padding: 0px 0px 5px 5px;
+	vertical-align: top;
+}
+.price_info {
+	color: #CCCCCC;
+	width: 115px;
+	padding: 40px 10px;
+}
+
+.price_info span {
+	color: #666666;
+}
+
+.num_info {
+	width: 115px;
+	padding: 45px 55px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.box_num {
+	width: 10px;
+	height: 10px;
+	border: 1px solid #cccccc;
+	padding: 5px;
+}
+
+.box_num_1 {
+	width: 30px;
+	height: 10px;
+	border: 1px solid #cccccc;
+	padding: 5px;
+}
+
+.subtotal_info {
+	width: 115px;
+	color: #f41443;
+	padding: 45px 10px;
+}
+
+.action_info {
+	padding: 45px 40px;
+}
+
+.west {
+	color: #666666;
+	padding: 5px;
+}
+
+
+/*优 七 特 帮助*/
+
+.quality {
+	font-size: 14px;
+	color: #000000;
+}
+
+.quality_1 {
+	font-size: 14px;
+	color: #959595;
+}
+
+.one {
+	width: 239px;
+	padding: 0px 0px 0px 10px;
+	border-right: 1px solid #959595;
+}
+
+.seven {
+	width: 1000px;
+}
+
+.cut {
+	width: 999px;
+	overflow: hidden;
+	margin: 20px 0px;
+}
+
+.exce {
+	padding: 5px;
+}
+
+
+/*结算条*/
+
+.account {
+	border: 1px solid #CCCCCC;
+	background-color: #F3F3F3;
+	margin: 40px 0px;
+}
+
+.onsale {
+	background-color: #f41443;
+	font-size: 16px;
+	padding: 15px 60px;
+}
+
+.onsale a {
+	color: #f9f9f9;
+}
+
+.check_jie {
+	padding: 20px 10px 10px;
+}
+
+.selecte_all2 {
+	padding: 18px 10px 10px;
+}
+
+.all {
+	padding: 18px 10px 10px;
+}
+
+.all span {
+	color: #f41443;
+}
+
+
+/*靓淘简介，表格*/
+
+.shopping {
+	padding: 5px;
+	font-size: 16px;
+	color: #484747;
+}
+
+.free {
+	padding: 5px;
+	color: #959595;
+}
+
+.guide {
+	margin-right: 158px;
+}
+
+.guanyu {
+	border: 1px solid #CCCCCC;
+	padding: 10px;
+}
+
+.guanyu a {
+	color: #666666;
+}
+
+.zhizhao {
+	width: 600px;
+	margin: 10px auto;
+}
