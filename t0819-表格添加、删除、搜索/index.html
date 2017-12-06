@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>0819一周测试</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+
+	<body>
+		<div class="bg">
+			<div class="container one">
+				<div id="top">
+					<label for="">添加：</label>
+					<input type="text" name="" id="name" placeholder="姓名" value="" class="con" />
+					<input type="text" name="age" id="age" placeholder="年龄" value="" class="con" />
+					<input type="button" id="add" value="添加" class="button" />
+					<label for="">变色：</label>
+					<input type="button" id="move" value="开启移入变色" class="button" />
+				</div>
+				<div id="contain">
+					<table border="0" cellspacing="0" cellpadding="0" id="table">
+						<thead>
+							<tr>
+							<th class="col_1">ID</th>
+							<th class="col_2">姓名</th>
+							<th class="col_3">年龄</th>
+							<th class="col_4">操作</th>
+						</tr>
+						</thead>
+						<tbody id="tbody">
+							<tr>
+							<td>1</td>
+							<td>张三</td>
+							<td>33</td>
+							<td><a name="dele" href="#">删除</a></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>李四</td>
+							<td>34</td>
+							<td><a name="dele" href="#">删除</a></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>王五</td>
+							<td>25</td>
+							<td><a name="dele" href="#">删除</a></td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>赵六</td>
+							<td>16</td>
+							<td><a name="dele" href="#">删除</a></td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>王四</td>
+							<td>44</td>
+							<td><a name="dele" href="#">删除</a></td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>Danny</td>
+							<td>23</td>
+							<td><a name="dele" href="#">删除</a></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				<div id="bott">
+					<label for="">搜索：</label>
+					<input type="text" name="" id="see_name" placeholder="姓名" value="" class="con" />
+					<input type="button" id="select" value="搜索" class="button" />
+					<label for="">排序：</label>
+					<input type="button" id="rand" value="年龄从小排序" class="button" />
+				</div>
+				<p>数组里存的是所有tr，排序的时候按照第三个单元格的innerHTML大小排序。最后按照新的顺序重新添加所有tr。</p>
+			</div>
+		</div>
+		<script src="js/add_select.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

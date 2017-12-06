@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>vue表格</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<style type="text/css">
+			.active {
+				background-color: yellow;
+			}
+			
+			.grey {
+				background-color: #eeeeee;
+			}
+			
+			.white {
+				background-color: #FFFFFF;
+			}
+			
+			.red:hover {
+				background-color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="bg">
+			<div class="container one" id="app">
+				<div id="top">
+					<label for="">添加：</label>
+					<input type="text" name="" id="name" placeholder="姓名" v-model="name" value="" class="con" />
+					<input type="text" name="age" id="age" placeholder="年龄" v-model="age" value="" class="con" />
+					<input type="button" id="add" value="添加" class="button" @click="push" />
+					<label for="">变色：</label>
+					<input type="button" id="move" v-model="value" class="button" v-bind:class="classObject" @click="change" />
+				</div>
+				<div id="contain">
+					<table border="0" cellspacing="0" cellpadding="0" id="table">
+						<thead>
+							<tr>
+								<th class="col_1">ID</th>
+								<th class="col_2">姓名</th>
+								<th class="col_3">年龄</th>
+								<th class="col_4">操作</th>
+							</tr>
+						</thead>
+						<tbody id="tbody">
+							<tr v-for="(item,index)item in td" v-bind:class="{active:td[index].isAct,grey:td[index].isGrey}" @mouseenter="changegrey(index)" @mouseleave="changewhite(index)">
+								<td>{{item.id}}</td>
+								<td>{{item.name}}</td>
+								<td>{{item.age}}</td>
+								<td>
+									<!--数组在变化，index随数组变化而变化-->
+									<a @click.prevent="del(index)">删除</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div id="bott">
+					<label for="">搜索：</label>
+					<input type="text" name="" id="see_name" placeholder="姓名" value="" v-model="selename" class="con" />
+					<input type="button" id="select" value="搜索" class="button" @click="selewho()" />
+					<label for="">排序：</label>
+					<input type="button" id="rand" value="年龄从小排序" class="button" @click="sorting(td.age)" />
+				</div>
+				<p>数组里存的是所有tr，排序的时候按照第三个单元格的innerHTML大小排序。最后按照新的顺序重新添加所有tr。</p>
+			</div>
+		</div>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var app = new Vue({
+				el: "#app",
+				data: {
+					name: '',
+					age: '',
+					idnum: 6,
+					selename: '',
+					isHover: false,
+					value: '开启移入变色',
+					num: 0.3,
+					td: [{
+						id: 1,
+						name: "张三",
+						age: "33",
+						isAct: false,
+						isGrey: false
+					}, {
+						id: 2,
+						name: "李四",
+						age: "33",
+						isAct: false,
+						isGrey: false
+					}, {
+						id: 3,
+						name: "王五",
+						age: "44",
+						isAct: false,
+						isGrey: false
+					}, {
+						id: 4,
+						name: "琉璃",
+						age: "23",
+						isAct: false,
+						isGrey: false
+					}, {
+						id: 5,
+						name: "第四",
+						age: "14",
+						isAct: false,
+						isGrey: false
+					}],
+					classObject: {
+						red: false,
+						button: true,
+					},
+				},
+				methods: {
+					del: function(index) {
+						this.td.splice(index, 1);
+					},
+					push: function() {
+						if(this.name == ''||this.age=='') {
+							alert("请输入添加对象！");
+						} else {
+							this.td.push({
+								id: this.idnum++,
+								name: this.name,
+								age: this.age
+							})
+						}
+					},
+					change: function() {
+						this.classObject.red = !this.classObject.red;
+						this.classObject.button = !this.classObject.button;
+						if(this.classObject.red == true) {
+							this.value = '关闭移入变色'
+						} else {
+							this.value = '开启移入变色'
+						}
+					},
+					changegrey: function(index) {
+						if(this.classObject.button == false) {
+							for(var i = 0; i < this.td.length; i++) {
+								if(this.td[i].id == this.td[index].id) {
+									this.td[i].isGrey = true;
+								} else {
+									this.td[i].isGrey = false;
+								}
+							}
+						}
+					},
+					changewhite: function(index) {
+						if(this.classObject.button == false) {
+							for(var i = 0; i < this.td.length; i++) {
+								if(this.td[i].id == this.td[index].id) {
+									this.td[i].isGrey = false;
+								}
+							}
+						}
+					},
+					selewho: function() {
+						if(this.selename == '') {
+							alert("请输入姓名！")
+						} else {
+							for(var i = 0; i < this.td.length; i++) {
+								if(this.selename == this.td[i].name) {
+									this.td[i].isAct = true;
+								} else {
+									this.td[i].isAct = false;
+								}
+							}
+						}
+
+					},
+					sorting: function() {
+
+					}
+				},
+
+			})
+		</script>
+	</body>
+
+</html>

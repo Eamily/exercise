@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>插入按钮</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<style type="text/css">
+			.main {
+				padding: 20px;
+			}
+			
+			.txt_center {
+				text-align: center;
+			}
+			
+			.txt_left {
+				text-align: left;
+			}
+			
+			.number {
+				padding: 4px 6px;
+				color: #3EAFE0;
+				font-size: 14px;
+				font-weight: bold;
+			}
+			
+			.requestList li {
+				list-style: decimal;
+				padding: 8px 0;
+			}
+			
+			.question,
+			.requestList {
+				font-size: 14px;
+				padding-bottom: 10px;
+			}
+			
+			.button {
+				padding: 4px 12px;
+				font-size: 14px;
+			}
+			
+			.queue {
+				min-height: 60px;
+				padding: 30px 0;
+			}
+			
+			.queue span {
+				width: 40px;
+				height: 60px;
+				line-height: 60px;
+				border: 1px solid #797979;
+				display: inline-block;
+				background-color: #E8E8E8;
+				color: #323232;
+				margin: 2px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container txt_center">
+			<div id="queue" class="main">
+				<input type="text" id="txt" v-model="num" class="number" placeholder="在此输入数字！" name="" id="" value="" />
+				<!--队列-->
+				<div class="clearfix">
+					<div class="fl">
+						<input type="button" class="button" name="" id="lAddBtn" value="左侧入" @click="ladd" />
+					</div>
+					<div class="fr">
+						<input type="button" class="button" name="" id="rAddBtn" value="右侧入" @click="radd" />
+					</div>
+				</div>
+				<div class="queue">
+					<!--初始为空-->
+					<!--<input type="button" v-model="num" name="" id="" value="" />-->
+				</div>
+				<div class="clearfix">
+					<div class="fl">
+						<input type="button" class="button" name="" id="lDelBtn" value="左侧出" @click="ldel" />
+					</div>
+					<div class="fr">
+						<input type="button" class="button" name="" id="rDelBtn" value="右侧出" @click="rdel" />
+					</div>
+				</div>
+			</div>
+			<img src="img/intro.jpg" alt="">
+			<div class="question txt_left">
+				题目： 如图，模拟一个队列，队列的每个元素是一个数字，初始队列为空 有一个input输入框，以及4个操作按钮
+			</div>
+			<ol class="requestList txt_left">
+				<li>
+					点击"左侧入"，将input中输入的数字从左侧插入队列中；
+				</li>
+				<li>点击"右侧入"，将input中输入的数字从右侧插入队列中；</li>
+				<li>点击"左侧出"，读取并删除队列左侧第一个元素，并弹窗显示元素中数值；</li>
+				<li>
+					点击"右侧出"，读取并删除队列右侧第一个元素，并弹窗显示元素中数值；
+				</li>
+				<li>
+					点击队列中任何一个元素，则该元素会被从队列中删除;
+				</li>
+			</ol>
+		</div>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var vm=new Vue({
+				el:"#queue",
+				data:{
+					num:''
+				},
+				methods:{
+					ladd:function () {
+						
+					},
+					radd:function () {
+						
+					},
+					ldel:function () {
+						
+					},
+					rdel:function () {
+						
+					}
+				}
+			})
+		</script>
+	</body>
+
+</html>
