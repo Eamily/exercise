@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>五星评价</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<style type="text/css">
+			.container {
+				width: 600px;
+				margin: 0 auto;
+			}
+			
+			.box {
+				width: 400px;
+				border: 1px solid #ccc;
+				padding: 50px;
+				margin: 100px auto;
+			}
+			
+			.box li {
+				display: inline;
+			}
+			
+			.star {
+				height: 20px;
+				width: 120px;
+				position: relative;
+				background: url(img/123.png) 0 0 repeat-x;
+				cursor: pointer;
+			}
+			
+			.star li a {
+				display: block;
+				width: 24px;
+				height: 20px;
+				overflow: hidden;
+				text-indent: -9999px;
+				position: absolute;
+				z-index: 5;
+			}
+			
+			.star li a.one {
+				left: 0;
+			}
+			
+			.star li a.two {
+				left: 24px;
+			}
+			
+			.star li a.three {
+				left: 48px;
+			}
+			
+			.star li a.four {
+				left: 72px;
+			}
+			
+			.star li a.five {
+				left: 96px;
+			}
+			
+			.cover {
+				background: url(img/123.png) 0 -25px repeat-x;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 0px;
+				height: 20px;
+				z-index: 1;
+			}
+			
+			#star-box {
+				position: relative;
+				width: 120px;
+				float: left;
+			}
+			
+			.clear {
+				clear: both;
+				padding: 10px 0;
+				text-align: center;
+				color: #000000;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div id="" class="box">
+				<div id="star-box">
+					<ul class="star">
+						<li>
+							<a href="#" title="1" class="one">1</a>
+						</li>
+						<li>
+							<a href="#" title="2" class="two">2</a>
+						</li>
+						<li>
+							<a href="#" title="3" class="three">3</a>
+						</li>
+						<li>
+							<a href="#" title="4" class="four">4</a>
+						</li>
+						<li>
+							<a href="#" title="5" class="five">5</a>
+						</li>
+					</ul>
+					<div class="cover"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				//设置n为全局变量，主要记录鼠标点击后.cover的with值
+				var n = 0;
+				$("#star-box ul li a").click(function() {
+					var t = $(this).attr("title");
+					n = t * 24;
+					$(".cover").css("width", n + "px");
+					$(".clear").text(movejudge(t));
+				});
+				$("#star-box ul li a").hover(function(e) {
+					var t = $(this).attr("title");
+					if(t * 24 < n) {
+						$(".cover").css("width", n + "px");
+					} else {
+						$(".cover").css("width", t * 24 + "px");
+					}
+					$(".clear").text(movejudge(t));
+				}, function() {
+					$(".cover").css("width", n + "px");
+					if(n/24==0){
+						$(".clear").text("");
+					}else{
+						$(".clear").text("当前您的评价为：" + movejudge(n / 24));
+					}
+				});
+
+				//鼠标移动、点击过程中，传入a标签的title值，与文字相对应
+				function movejudge(ti) {
+					var txt = "";
+					if(ti == 1) {
+						txt = "非常差，回去再练练";
+					}
+					if(ti == 2) {
+						txt = "真的是差，都不忍心说你了";
+					}
+					if(ti == 3) {
+						txt = "一般，还过得去吧";
+					}
+					if(ti == 4) {
+						txt = "很好，是我想要的东西";
+					}
+					if(ti == 5) {
+						txt = "太完美了，此物只得天上有，人间哪得几回闻!";
+					}
+					return txt;
+				}
+			})
+		</script>
+	</body>
+
+</html>
